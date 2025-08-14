@@ -1,0 +1,23 @@
+button.pri {
+  aspect-ratio: 4/1.5;
+  background-color: var(--heritage-green);
+  padding: 3px 5px;
+  border: 2px solid rgb(255, 255, 255);
+  color: var(--ivory-white);
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+button.pri:hover {
+  scale: 1.02;
+  transform: translateY(-2px);
+  color: var(--charcoal-black);
+  background-color: var(--verdant-lime);
+}
+
+@media screen and (max-width: 670px) {
+  button.pri {
+    aspect-ratio: 4/1;
+    font-size: 1rem;
+  }
+}/*# sourceMappingURL=button.css.map */

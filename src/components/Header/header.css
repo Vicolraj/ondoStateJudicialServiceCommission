@@ -1,0 +1,128 @@
+header {
+  background-color: var(--judicial-navy);
+  position: sticky;
+  top: 0;
+  padding: 10px 20px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 400;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+header * {
+  color: var(--ivory-white);
+}
+header svg {
+  width: 40px;
+}
+header div:has(> .logo) {
+  height: 100%;
+  position: relative;
+}
+header div:has(> .logo)::after {
+  content: "Ondo State";
+  position: absolute;
+  right: 0;
+  height: 100%;
+  margin-right: -98px;
+  white-space: nowrap;
+  color: var(--ivory-white);
+  z-index: 10;
+  font-weight: 600;
+}
+header div:has(> .logo)::before {
+  content: "Sunshine State";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  margin-left: 52px;
+  display: flex;
+  align-items: end;
+  white-space: nowrap;
+  color: var(--ivory-white);
+  z-index: 10;
+  font-weight: 400;
+  font-size: small;
+}
+header .logo {
+  height: 100%;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+}
+header nav {
+  margin-left: 0;
+}
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+header nav ul li {
+  list-style: none;
+}
+header nav ul li a {
+  transition: 0.3s;
+  position: relative;
+  font-size: larger;
+}
+header nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-bottom: -3.9px;
+  border-radius: 10px;
+  width: 0;
+  height: 2px;
+  transition: 0.3s;
+  background-color: var(--ivory-white);
+}
+header nav ul li .active::after, header nav ul li a:hover::after {
+  width: 100%;
+}
+
+@media screen and (max-width: 670px) {
+  header {
+    --padding: 20px;
+    position: relative;
+  }
+  header [icon] {
+    top: 0;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+  }
+  header [icon] * {
+    color: var(--judicial-navy);
+  }
+  nav {
+    --width: 50vw;
+    width: var(--width);
+    background-color: var(--light-gray);
+    position: absolute;
+    left: 0;
+    padding-top: 20px;
+    top: 0;
+    min-height: 100svh;
+    box-shadow: 0px 0px 10px 0.001px var(--judicial-navy);
+    margin-left: -56vw;
+    transition: 0.5s;
+  }
+  nav ul {
+    display: block !important;
+  }
+  nav ul li {
+    padding: 5px var(--padding);
+    border: 1px solid rgb(222, 222, 222);
+    margin: 10px;
+    box-shadow: 0px 0px 4px 1px rgb(218, 218, 218);
+    font-size: 1.2rem;
+  }
+  nav ul li * {
+    color: var(--judicial-navy);
+  }
+}/*# sourceMappingURL=header.css.map */

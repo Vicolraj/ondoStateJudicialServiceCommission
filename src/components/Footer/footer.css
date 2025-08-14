@@ -1,0 +1,22 @@
+.footer {
+  background: var(--charcoal-black);
+  text-align: center;
+  padding: 20px;
+}
+.footer * {
+  color: var(--courtroom-gray);
+  text-align: center;
+}
+
+@media screen and (max-width: 670px) {
+  .footer {
+    background: var(--charcoal-black);
+    text-align: center;
+    line-height: 1rem;
+    padding: 5px;
+  }
+  .footer * {
+    color: var(--courtroom-gray);
+    text-align: center;
+  }
+}/*# sourceMappingURL=footer.css.map */
